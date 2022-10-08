@@ -41,7 +41,7 @@ export default function Form() {
     <input type="text" ref={subtitleInput}></input>
     <input type="button" value="추가하기" onClick={addList}></input>
     </DivSection></>
-    
+ 
 }
 
 
@@ -67,4 +67,3 @@ const DivSection = styled.div`
     }
 
 `
-
