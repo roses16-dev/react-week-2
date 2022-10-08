@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 
 export default function Detail () {
 
+    const id = useParams().id
+    const todo = useSelector(state => state.todoList.todoList.filter(element => element.id === +id))[0]
 
-    const todo = useSelector(state => state.todoList.todoList.filter(element => element.id === +(useParams().id)))[0]
-    console.log(todo)
     return <>
             <Header />
             <DivSection>
