@@ -10,14 +10,12 @@ export default function Todo({ todo }){
     
     const clickToggle = (event) => {
         event.stopPropagation()
-        console.log('toggle')
         dispatch(toggleIsDone(todo.id))
         
     }
 
     const clickDelete = (event) => {
         event.stopPropagation()
-        console.log('delete')
         dispatch(deleteTodo(todo.id))
     }
 
