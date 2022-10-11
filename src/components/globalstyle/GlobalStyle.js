@@ -1,9 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import './miniReset.css'
 
 const GlobalStyle = createGlobalStyle`
 
 *, *::before, *::after {
- box-sizing: border-box;
  text-decoration: none;
 }
 
