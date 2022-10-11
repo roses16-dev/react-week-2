@@ -7,3 +7,4 @@
 - Layout    : List 컴포넌트에게 배열을 전달하는 컴포넌트. Working과 done 리스트가 모여있다.
 - List      : Todo의 배열을 입력받아 표시하는 컴포넌트
 - Todo      : 하나의 Todo를 입력받아 표시하는 컴포넌트
+- Detail    : Detail 페이지 내 내용을 표시하는 컴포넌트
