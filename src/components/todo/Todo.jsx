@@ -20,7 +20,7 @@ export default function Todo({ todo }){
     }
 
     const clickDetail = (event) => {
-        navigate(`/detail/${todo.id}`)
+        navigate(`/details/${todo.id}`)
     }
 
     return <>

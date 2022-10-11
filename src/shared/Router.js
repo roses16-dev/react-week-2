@@ -3,15 +3,15 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import TodoList from "../pages/TodoList";
-import Detail from "../pages/Detail";
+import Details from "../pages/Details";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<TodoList />} />
-        <Route path="/detail" element={<Detail />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );

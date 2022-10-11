@@ -1,15 +1,12 @@
-import Header from "../components/header/Header";
 import styled from "styled-components";
-import { useParams, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useSelector } from "react-redux";
 
-export default function Detail () {
+export default function Detail ({id}) {
 
-    const id = useParams().id
     const todo = useSelector(state => state.todoList.todoList.filter(element => element.id === +id))[0]
 
     return <>
-            <Header />
             <DivSection>
                 <div>
                     <h4>Id : {todo.id}</h4>
