@@ -1,5 +1,6 @@
 import styled from "styled-components";
-export const DivWrap = styled.div `
+
+export const DivListWrap = styled.div `
 
     h3{
         margin-bottom: 0px;

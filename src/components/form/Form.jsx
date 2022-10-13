@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux"
 import { addTodo } from "../../redux/modules/todoList"
-import { DivSection } from "./styled"
+import { DivFormSection } from "./styled"
 
 export default function Form() {
 
@@ -31,11 +31,11 @@ export default function Form() {
         titleInput.current.value = subtitleInput.current.value = ''
     }
 
-    return <><DivSection>
-    <input type="text" ref={titleInput}></input>
-    <input type="text" ref={subtitleInput}></input>
-    <input type="button" value="추가하기" onClick={addList}></input>
-    </DivSection></>
- 
+    return <><DivFormSection>
+                <input type="text" ref={titleInput}></input>
+                <input type="text" ref={subtitleInput}></input>
+                <input type="button" value="추가하기" onClick={addList}></input>
+            </DivFormSection></>
+            
 }
 

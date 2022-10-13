@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const DivSection = styled.div`
+export const DivFormSection = styled.div`
     width:100%;
     height: 80px;
 

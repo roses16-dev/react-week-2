@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivBox = styled.div `
+export const DivTodoWrap = styled.div `
     width: 200px;
     height: 200px;
     border: 1px dashed;

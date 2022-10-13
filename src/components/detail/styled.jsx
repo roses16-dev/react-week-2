@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivSection = styled.div `
+export const DivDetailSection = styled.div `
     width: 350px;
     height: 350px;
     margin: 15px auto;

@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { deleteTodo, toggleIsDone } from "../../redux/modules/todoList";
 import { useNavigate } from "react-router-dom"
-import { DivBox } from "./styled";
+import { DivTodoWrap } from "./styled";
 
 export default function Todo({ todo }){
 
@@ -24,7 +24,7 @@ export default function Todo({ todo }){
     }
 
     return <>
-        <DivBox onClick={clickDetail}>
+        <DivTodoWrap onClick={clickDetail}>
             <div className="textwrap">
                 <h4>{todo.title}</h4>
                 <p>{todo.subtitle}</p>
@@ -33,6 +33,6 @@ export default function Todo({ todo }){
                 <input type="button" value={todo.isDone ? "취소" : "완료"} onClick={clickToggle}></input>
                 <input type="button" value="삭제" onClick={clickDelete}></input>
             </div>
-        </DivBox>
+        </DivTodoWrap>
     </>
 }
