@@ -5,13 +5,12 @@ import { getTodoByID } from "../../redux/modules/todoList";
 
 import { DivDetailSection } from "./styled";
 
-
 export default function Detail ({ id }) {
     
     
     const dispatch = useDispatch();
     dispatch(getTodoByID(+id))
-    console.log(id)
+    
     const todo = useSelector(state => state.todoList.todo);
 
     return <>
