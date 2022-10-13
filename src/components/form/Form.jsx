@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { useRef } from "react";
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addTodo } from "../../redux/modules/todoList"
 
 export default function Form() {
@@ -10,9 +10,6 @@ export default function Form() {
     const titleInput = useRef();
     const subtitleInput = useRef();
 
-    // Next Key 계산
-    const listtemp = useSelector((state) => state.todoList.todoList)
-    const nextKey = listtemp[listtemp.length-1] ? listtemp[listtemp.length-1].id + 1 : 0 ;
 
     const addList = () => {
 
@@ -27,8 +24,6 @@ export default function Form() {
         }
 
         dispatch(addTodo({
-            id: nextKey,
-            isDone: false,
             title: titleInput.current.value,
             subtitle: subtitleInput.current.value
         }))

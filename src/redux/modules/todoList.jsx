@@ -63,8 +63,15 @@ export default function todoList(state = initialState, action){
                 })
             }
         case "ADD_TODO" :
+            const nextId = state.todoList[state.todoList.length-1] ? state.todoList[state.todoList.length-1].id + 1 : 0 ;
             return {
-                todoList: [...state.todoList, action.payload]
+                
+                todoList: [...state.todoList, {
+                    id: nextId,
+                    title: action.payload.title,
+                    subtitle: action.payload.subtitle,
+                    isDone: false
+                }]
             }
         default:
             return state
