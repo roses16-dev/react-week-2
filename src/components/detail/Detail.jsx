@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export default function Detail ({id}) {
+import { DivSection } from "./styled";
 
-    const todo = useSelector(state => state.todoList.todoList.filter(element => element.id === +id))[0]
+export default function Detail ({id}) {
+    
+    const todo = useSelector(state => state.todoList.todoList.find(element => element.id === +id));
 
     return <>
             <DivSection>
@@ -21,14 +22,3 @@ export default function Detail ({id}) {
         </>
 
 }
-
-const DivSection = styled.div `
-    width: 350px;
-    height: 350px;
-    margin: 15px auto;
-
-    h2, h4{
-        margin: 15px 5px;
-        color: #000000;
-    }
-`
