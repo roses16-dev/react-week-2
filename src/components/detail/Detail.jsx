@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
+import { getTodoByID } from "../../redux/modules/todoList";
 
 import { DivDetailSection } from "./styled";
 
-export default function Detail ({id}) {
+
+export default function Detail ({ id }) {
     
-    const todo = useSelector(state => state.todoList.todoList.find(element => element.id === +id));
+    
+    const dispatch = useDispatch();
+    dispatch(getTodoByID(+id))
+    console.log(id)
+    const todo = useSelector(state => state.todoList.todo);
 
     return <>
             <DivDetailSection>
