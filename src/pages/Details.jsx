@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 export default function Details () {
 
-    const id = useParams().id
+    const id = useParams().id;
 
     return <>
             <Header />
